@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* 1. Use the full context path for reliability */
+    background-image: url('${pageContext.request.contextPath}/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    /* 2. Changed margin to 0 because body flex handles centering */
+    width: 350px;
+    margin: 0; 
+    /* 3. Added transparency for a modern look */
+    background: rgba(255, 255, 255, 0.92);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    /* 4. Frosted glass effect */
+    backdrop-filter: blur(8px);
+}
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #4facfe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(79,172,254,0.5);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4facfe;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00c6ff;
+}
+
+a {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #4facfe;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>Register</h2>
+
+<form action="register" method="post">
+
+<input type="text" name="name" placeholder="Name" required><br><br>
+
+<input type="email" name="email" placeholder="Email" required><br><br>
+
+<input type="password" name="password" placeholder="Password" required><br><br>
+
+<button type="submit">Register</button>
+
+</form>
+
+<a href="login.html">Login</a>
+</div>
+
+</body>
+</html>

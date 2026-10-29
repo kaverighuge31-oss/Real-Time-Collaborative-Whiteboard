@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    
+</head>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #cccccc; /* If you see grey, the CSS works, but the image path is wrong */
+    background-image: url('images/bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    /* Adding a slight transparency (0.9) to make it look modern */
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    /* Optional: adds a blur effect to the background behind the card */
+    backdrop-filter: blur(5px); 
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #5a67d8;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #888;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.google-btn:hover {
+    background: #f5f5f5;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 10px;
+}
+</style>
+<body>
+
+<div class="login-container">
+    <form class="login-form" action="login" method="POST">
+        <h2>Login</h2>
+
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Password" name="password" required>
+
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
